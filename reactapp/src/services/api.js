@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-// Use localhost for development, relative URL for tests
-const API_BASE = process.env.NODE_ENV === 'development' 
-  ? "http://localhost:8080" 
-  : "";
+// Use environment variable for API URL, fallback to localhost for development
+const API_BASE = process.env.REACT_APP_API_URL || 
+  (process.env.NODE_ENV === 'development' ? "http://localhost:8080" : "");
 const SURVEY_BASE = `${API_BASE}/api/surveys`;
 const AUTH_BASE = `${API_BASE}/api/auth`;
 

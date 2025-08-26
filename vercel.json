@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "buildCommand": "cd reactapp && npm install && npm run build",
+  "outputDirectory": "reactapp/build",
+  "installCommand": "cd reactapp && npm install",
+  "framework": "create-react-app",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://your-backend-url.railway.app"
+  }
+}
