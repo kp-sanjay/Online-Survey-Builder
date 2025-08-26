@@ -1,16 +1,18 @@
 {
   "version": 2,
-  "buildCommand": "cd reactapp && npm install && npm run build",
-  "outputDirectory": "reactapp/build",
-  "installCommand": "cd reactapp && npm install",
-  "framework": "create-react-app",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "reactapp/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
-  "env": {
-    "REACT_APP_API_URL": "https://your-backend-url.railway.app"
-  }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
