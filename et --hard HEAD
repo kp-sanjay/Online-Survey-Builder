@@ -1,0 +1,5 @@
+[33m95ad007[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelopment[m[33m, [m[1;31morigin/development[m[33m)[m Update application configuration and ensure all changes are committed
+[33m6db9b00[m Fix 500 Internal Server Error - Switch to H2 database for development - Update SurveyEntry entity with @Table annotation - All API endpoints now working - Application starts successfully without MySQL dependency
+[33me75aee3[m Fix backend to pass all Maven test cases - Updated SurveyController to handle missing fields gracefully - Added H2 database configuration for testing - All 8 test cases now passing
+[33m77bc9b6[m Implement backend for survey creation and listing as per SRS and test requirements
+[33mffefcde[m Ensure all fields are always present in SurveyEntry JSON response
